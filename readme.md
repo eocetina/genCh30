@@ -1,1 +1,3 @@
 mi primer repo
+
+SEGUNDA PRACTICA REPOSITORIOS
