@@ -1,0 +1,26 @@
+/*
+Ejercicio 1
+*/
+//Copy the code below into your workspace:
+//Complete the function to print out the string: This is a sentence.
+console.clear();
+
+
+let arr = ["This", "is", "a", "sentence."];
+
+function printOutString() {
+    console.log(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
+}
+
+
+printOutString();
+
+
+//con funcion join
+
+function printOutString2(){
+    console.log(arr.join(' '));
+}
+console.log("Con funcion Join");
+printOutString2();
+

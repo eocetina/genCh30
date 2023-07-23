@@ -1,0 +1,52 @@
+//Ejercicio 3
+/*
+sumamos todos los valores del array y a la vez multiplicamos todos los elementos entre si.
+Edwin cetina 
+*/
+console.clear();
+
+
+const array=[1,2,3,4];
+
+function multiplcacionArray(array) { //recorremos el arreglo y vamos multiplicando elemento por elemento 
+    let res=1;
+
+    for (let index = 0; index < array.length; index++) {
+    res*=array[index];
+    } 
+
+    return res;
+}
+
+function sumatoriaArray(array) {//recorremos el arreglo y sumamos elemento por elemento
+    let res=0;
+   
+    for (let index = 0; index < array.length; index++) {
+        res+=array[index];
+    }
+   
+    return res;
+}
+
+/////////////////Solucion con reduce///////////////////////////
+
+
+function multiWithReduce(array) {
+const suma=array.reduce((resultado,current)=>resultado*current);
+return suma;
+}
+
+
+function sumatoriacWithReduce(array) {
+const suma=array.reduce((resultado,current)=>resultado+current);
+return suma;
+}
+
+
+console.log("La multiplicacion del array"+array+" es: "+multiplcacionArray(array));
+console.log("La sumatoria del array"+array+" es: "+sumatoriaArray(array));
+
+console.log("ejecucion con reduce")
+console.log("sumatoria "+sumatoriacWithReduce(array));
+console.log("multiplicacion "+multiWithReduce(array));
+

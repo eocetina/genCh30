@@ -1,0 +1,49 @@
+//Ejercicio 4 
+/*
+Edwin cetina 
+*/
+console.clear();
+let student1Courses = ['Math', 'English', 'Programming'];
+let student2Courses = ['Geography', 'Spanish', 'Programming'];
+
+function busquedaCoincidencias(studentOneArray,studentTwoArray) {
+    for (let index = 0; index < studentOneArray.length; index++) {//comenzamos verificando elemento por elemento del arreglo
+        for (let index2 = 0; index2 < studentTwoArray.length; index2++) {//el elemento seleccionado previamente en el primer for se compara con todos los elementos del segundo arreglo
+            if(studentOneArray[index]==studentTwoArray[index2]){console.log("coincidencia con for :"+studentOneArray[index] )}
+        }
+    }
+}
+
+busquedaCoincidencias(student1Courses,student2Courses)
+
+
+//Ahora con funciones includes
+
+
+function busquedaCoincidenciasIncludes(studentOneArray,studentTwoArray) {
+    for (let index = 0; index < studentOneArray.length; index++) {
+        if(studentTwoArray.includes(studentOneArray[index])) console.log("coincidencias con includes "+studentOneArray[index]);
+    }
+    
+}
+
+busquedaCoincidenciasIncludes(student1Courses,student2Courses)
+
+
+//Ahora con funcion filter()
+
+function busquedaCoincidenciasFilter(studentOneArray,studentTwoArray){
+    let coincidencias=[" "];
+    for (let index = 0; index < studentOneArray.length; index++) {//tomamos un elemento de un arreglo
+        if(studentTwoArray.filter(subject=>studentOneArray[index]==subject).length>0){//el elemento anterior lo filtramos con la funcion
+            console.log("coincidencia con filter :"+studentOneArray[index])
+        }
+    }
+
+ }
+
+//console.log("con Filter")
+
+busquedaCoincidenciasFilter(student1Courses,student2Courses);
+
+

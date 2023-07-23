@@ -1,0 +1,74 @@
+//Ejercicio 5 
+/*
+Edwin Cetina
+*/
+console.clear();
+
+
+let people = ["Maria", "Dani", "Luis", "Juan", "Camila"];
+
+function printNames(people){
+   console.log(people);
+}
+
+
+function removeName(people,name){
+   people = people.filter(elemento => elemento !== name);
+   return people;
+}
+
+function moverNombreAlFrente(people,name) {
+    people=removeName(people,name);
+    people.unshift(name);
+    return people;
+    
+}
+
+function AddNameToTheEnd(people,name) {
+    people.push(name);
+    return people;
+}
+
+function loopPeopleArrayAndBreak(people,name) {
+    let cont=0;
+   console.log("Iteraremos el array hasta el nombre: "+name)
+  
+   for (let index = 0; index < people.length; index++) {
+      console.log(people[index]);
+     if(people[index]===name)break;  
+   }
+   
+}
+
+function indexOfName(people,name){
+   const index=people.findIndex(element=>element===name);
+   return index;
+}
+
+//imprimimos todos los Nombres
+console.log("inciso 1 Nombre: )")
+printNames(people);
+//quitamos Dani
+console.log("inciso 2)")
+people=removeName(people,"Dani")
+printNames(people);
+//quitamos a Juan
+console.log("inciso 3)")
+people=removeName(people,"Juan")
+printNames(people);
+//mover al frente Luis
+console.log("inciso 4)")
+people=moverNombreAlFrente(people,"Luis")
+printNames(people);
+//Agregar mi Nombre
+console.log("inciso 5)")
+people=AddNameToTheEnd(people,"Edcet")
+printNames(people);
+// Ahora con loops recorreremos el array hasta Maria
+console.log("inciso 6)")
+loopPeopleArrayAndBreak(people,"Maria")
+//buscamos el indice de Maria o cualquier nombre
+console.log("inciso 7)")
+console.log("Maria esta en el indice ["+indexOfName(people,"Maria")+"] comenzando desde 0");
+console.log("Arreglo final")
+printNames(people);

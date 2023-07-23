@@ -1,0 +1,40 @@
+//Ejercicio 6
+/*
+Hacer bubble sort
+
+Creo una variable que indica si se hizo un ordenamiento 
+mientras se detecte cambios se ira verificando de nuevo todo el arreglo
+cuando todo este ordenado en la ultima iteracion de verificacion mi variable de cambio la establezco como falsa
+y una vez terminando de verificar todo y que no se realizo ningun cambio el ciclo se termina y devuelve un arreglo ordenado
+
+*/
+console.clear();
+
+
+let numbersArray=[3,6,12,5,100,1];
+
+
+function bubbleSort(numbersArray) {
+let cambio=false;
+let temp=0;
+
+   do {
+    cambio=false;
+      
+      for (let i = 0; i < numbersArray.length-1; i++) {  
+         if(numbersArray[i]>numbersArray[i+1]){
+         temp=numbersArray[i+1];
+         numbersArray[i+1]=numbersArray[i];
+         numbersArray[i]=temp;
+         cambio=true;// se detecta un cambio y se notifica
+         }
+      }
+      
+   } while (cambio)
+
+   return numbersArray;
+}
+
+
+console.log(bubbleSort(numbersArray))
+ 

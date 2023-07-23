@@ -1,0 +1,31 @@
+/*
+Ejercicio 2
+
+
+
+*/
+
+console.clear();
+
+const arreglo1=[1, 2, 4, 5];
+
+function multiplicaArray(array) {
+    
+    for (let index = 0; index < arreglo1.length; index++) {
+        arreglo1[index]=2*arreglo1[index];
+    }   
+return array;
+}
+
+
+console.log(multiplicaArray(arreglo1));
+
+// con funcion map()
+function multiplicaArray2(array){
+    const map1 = array1.map(x => x * 2);
+return array;    
+} 
+
+console.log("multiplicacion con funcion map");
+console.log(multiplicaArray2(array));
+
